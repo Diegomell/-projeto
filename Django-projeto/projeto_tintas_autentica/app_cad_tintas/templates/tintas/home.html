@@ -1,0 +1,72 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="{% static 'css/style.css' %}">
+
+  <title>Tintas autentica</title>
+</head>
+<body>
+  <nav class="navegar"
+
+  style="
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  align-items: center;
+  justify-content: center;
+  height: 120px;
+  width: 100%;
+  margin: 0 auto;
+  background-color: grey;
+  "
+  
+  
+  >
+    <div class="container">
+      <span class="navbar-itens">Tintas autentica</span>
+    </div>
+  </nav>
+
+  <div style="height: 50px;"></div>
+
+  <form action="{% url 'lista_de_tintas'}" method="post"></form>
+  {% csrf_token %}
+  <div class="Adicionar"
+
+    
+  style="
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  align-items: center;
+  justify-content: center;
+  height: 400px;
+  width: 50%;
+  margin: 0 auto;
+  background-color: rgba(128, 128, 128, 0.144);
+  "
+  
+  >
+
+    <h1>Digite o codigo da tinta</h1>
+    
+    Marca do carro<input name='marca' class= "form-control-sm" type="text">
+   
+    Modelo<input name= 'modelo' class= "form-control-sm" type="text">
+    
+    ano<input name='ano' class="form-control-sm" type="number">
+
+    Nome da tinta <input name='cor' class= "form-control-sm" type="text">
+    
+    Codigo da tinta<input name='codigo' class= "form-control-sm" type="text">
+    
+    <button type="button" class= "form-control-sm" >Enviar</button>
+
+  </div>
+
+</body>
+</html>

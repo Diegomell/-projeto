@@ -1,0 +1,22 @@
+    <div class="container">
+        <table>
+            <tr>
+                <th></th>
+                <th></th>
+                <th></th>
+                <th></th>
+                <th></th>
+            </tr>
+            {% for tinta in tintas %}
+            <tr>
+                <td>{{tinta.id}}</td>
+                <td>{{tinta.marca}}</td>
+                <td>{{tinta.modelo}}</td>
+                <td>{{tinta.ano}}</td>
+                <td>{{tinta.cor}}</td>
+                <td>{{tinta.codigo}}</td>
+            </tr>
+            {% endfor %}
+        </table>
+    
+    </div>
